@@ -1,0 +1,73 @@
+INSERT INTO subselect.person (name) VALUES ('Agnetha Fältskog');
+INSERT INTO subselect.person (name) VALUES ('Björn Ulvaeus');
+INSERT INTO subselect.person (name) VALUES ('Benny Andersson');
+INSERT INTO subselect.person (name) VALUES ('Anni-Frid Lyngstad');
+INSERT INTO subselect.person (name) VALUES ('Mike Batt');
+INSERT INTO subselect.person (name) VALUES ('Ronnie Wood');
+INSERT INTO subselect.person (name) VALUES ('Charlie Watts');
+INSERT INTO subselect.person (name) VALUES ('Mick Jagger');
+
+-- Usually this table would be incremented using a trigger
+INSERT INTO subselect.recording_key VALUES (DEFAULT );
+INSERT INTO subselect.recording_key VALUES (DEFAULT );
+INSERT INTO subselect.recording_key VALUES (DEFAULT );
+INSERT INTO subselect.recording_key VALUES (DEFAULT );
+INSERT INTO subselect.recording_key VALUES (DEFAULT );
+INSERT INTO subselect.recording_key VALUES (DEFAULT );
+INSERT INTO subselect.recording_key VALUES (DEFAULT );
+INSERT INTO subselect.recording_key VALUES (DEFAULT );
+INSERT INTO subselect.recording_key VALUES (DEFAULT );
+INSERT INTO subselect.recording_key VALUES (DEFAULT );
+
+INSERT INTO subselect.recording (recording_id, version,  title, artist, duration, lyrics, genre) VALUES (1,  1, 'Dancing Queen', 'ABBA', '360', 'Shes the Dancing Queen, Quick and Mean', 'Disco');
+INSERT INTO subselect.recording (recording_id, version,  title, artist, duration, lyrics, genre) VALUES (1,  2, 'Dancing Queen', 'ABBA', '360', 'Shes the Dancing Queen', 'Disco');
+INSERT INTO subselect.recording (recording_id, version,  title, artist, duration, lyrics, genre) VALUES (2,  1, 'Waterloo', 'ABBA', '340', 'Waterloo oo oo oo ', 'Disco');
+INSERT INTO subselect.recording (recording_id, version,  title, artist, duration, lyrics, genre) VALUES (3,  1, 'Money, Money, Money', 'ABBA', '369', '', 'Disco');
+INSERT INTO subselect.recording (recording_id, version,  title, artist, duration, lyrics, genre) VALUES (3,  2, 'Money, Money, Money, Honey', 'ABBA', '369', '', 'Disco');
+INSERT INTO subselect.recording (recording_id, version,  title, artist, duration, lyrics, genre) VALUES (4,  1, 'Thank You for the music', 'ABBA', '220', 'Yeah Yeah Yeah', 'Disco');
+INSERT INTO subselect.recording (recording_id, version,  title, artist, duration, lyrics, genre) VALUES (5,  1, 'Fernando', 'ABBA', '225', '', 'Disco');
+INSERT INTO subselect.recording (recording_id, version,  title, artist, duration, lyrics, genre) VALUES (6,  1, 'Manish Boy', 'The Rolling Stones', '225', '', 'Rock');
+INSERT INTO subselect.recording (recording_id, version,  title, artist, duration, lyrics, genre) VALUES (7,  1, 'Crackin Up', 'The Rolling Stones', '225', '', 'Rock');
+INSERT INTO subselect.recording (recording_id, version,  title, artist, duration, lyrics, genre) VALUES (8,  1, 'Live Love Frolic', 'The Barking Dogs', '225', 'Live Love Frolic', 'Alt Elctro');
+
+INSERT INTO subselect.album ( title, artist, format, release_date) VALUES ('Best of ABBA Vol 1', 'ABBA', 'CD', '2010');
+INSERT INTO subselect.album ( title, artist, format, release_date) VALUES ('Best of ABBA Vol 2', 'ABBA', 'CD', '2011');
+INSERT INTO subselect.album ( title, artist, format, release_date) VALUES ('Dancing Queen', 'ABBA', 'CD', '2013');
+INSERT INTO subselect.album ( title, artist, format, release_date) VALUES ('Love You Live', 'The Rolling Stones', 'Digital', '2009');
+INSERT INTO subselect.album ( title, artist, format, release_date) VALUES ('Live Love Frolic', 'The Barking Dogs', 'Digital', '2015');
+
+INSERT INTO subselect.track (album_id, recording_id, position) VALUES (1, 5, 1);
+INSERT INTO subselect.track (album_id, recording_id, position) VALUES (1, 2, 2);
+INSERT INTO subselect.track (album_id, recording_id, position) VALUES (1, 1, 3);
+INSERT INTO subselect.track (album_id, recording_id, position) VALUES (2, 3, 1);
+INSERT INTO subselect.track (album_id, recording_id, position) VALUES (2, 4, 2);
+INSERT INTO subselect.track (album_id, recording_id, position) VALUES (3, 1, 3);
+INSERT INTO subselect.track (album_id, recording_id, position) VALUES (4, 6, 1);
+INSERT INTO subselect.track (album_id, recording_id, position) VALUES (4, 7, 2);
+INSERT INTO subselect.track (album_id, recording_id, position) VALUES (5, 8, 1);
+
+INSERT INTO subselect.recording_person (person_id, recording_id) VALUES (1,1);
+INSERT INTO subselect.recording_person (person_id, recording_id) VALUES (2,1);
+INSERT INTO subselect.recording_person (person_id, recording_id) VALUES (3,1);
+INSERT INTO subselect.recording_person (person_id, recording_id) VALUES (4,1);
+INSERT INTO subselect.recording_person (person_id, recording_id) VALUES (5,1);
+INSERT INTO subselect.recording_person (person_id, recording_id) VALUES (1,2);
+INSERT INTO subselect.recording_person (person_id, recording_id) VALUES (2,2);
+INSERT INTO subselect.recording_person (person_id, recording_id) VALUES (3,2);
+INSERT INTO subselect.recording_person (person_id, recording_id) VALUES (4,2);
+INSERT INTO subselect.recording_person (person_id, recording_id) VALUES (5,2);
+INSERT INTO subselect.recording_person (person_id, recording_id) VALUES (1,3);
+INSERT INTO subselect.recording_person (person_id, recording_id) VALUES (2,3);
+INSERT INTO subselect.recording_person (person_id, recording_id) VALUES (3,3);
+INSERT INTO subselect.recording_person (person_id, recording_id) VALUES (4,3);
+INSERT INTO subselect.recording_person (person_id, recording_id) VALUES (1,4);
+INSERT INTO subselect.recording_person (person_id, recording_id) VALUES (2,4);
+INSERT INTO subselect.recording_person (person_id, recording_id) VALUES (3,4);
+INSERT INTO subselect.recording_person (person_id, recording_id) VALUES (4,4);
+INSERT INTO subselect.recording_person (person_id, recording_id) VALUES (1,5);
+INSERT INTO subselect.recording_person (person_id, recording_id) VALUES (2,5);
+INSERT INTO subselect.recording_person (person_id, recording_id) VALUES (3,5);
+INSERT INTO subselect.recording_person (person_id, recording_id) VALUES (7,6);
+INSERT INTO subselect.recording_person (person_id, recording_id) VALUES (8,6);
+INSERT INTO subselect.recording_person (person_id, recording_id) VALUES (7,7);
+INSERT INTO subselect.recording_person (person_id, recording_id) VALUES (8,7);
